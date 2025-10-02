@@ -1,0 +1,104 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  background: #fff0f5;
+  text-align: center;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 600px; /* wider for 5 columns */
+  margin: auto;
+  background: #ffe6f9;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #ffb6c1;
+}
+
+h1, h2, strong {
+  font-weight: bold;
+  color: #ffb6c1;
+  font-style: italic;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 100px); /* 5 columns for 10 cards */
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100px;
+  height: 100px;
+  background: #ff99cc;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  color: transparent;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img.card-image {
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: none;
+}
+
+.card.flipped img.card-image,
+.card.matched img.card-image {
+  display: block;
+}
+
+.card.flipped,
+.card.matched {
+  background: #ffb6c1;
+  cursor: default;
+  box-shadow: 0 6px 10px rgba(255, 182, 193, 0.8);
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #ffb6c1;
+}
+
+#restart-btn {
+  background: #ffb6c1;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+}
+
+.photo-film {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ffb6c1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
